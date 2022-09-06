@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <style>
+        .yellow-block {
+        background-color: yellow;
+        padding: 0.5rem 1rem;
+        }
+        .title {
+        text-align: right;
+        margin-bottom: 2rem;
+        }
+        fieldset {
+        padding: 2rem;
+        }
+        legend {
+        padding: 8px;
+        }
+    
+        .group {
+        margin-bottom: 16px;
+        }
+    
+        .question {
+        display: block;
+        }
+    
+        .answers {
+        padding-top: 4px;
+        padding-left: 32px;
+        }
+    
+        input {
+        margin: .4rem;
+        }
+    
+        .btn-container {
+        text-align: right;
+        }
+    
+        button {
+        background-color: #4caf80;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        }
+    
+        button:hover {
+        background-color: #4caf50;
+        }
+    
+        .result {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        }
+    </style>
+    <div id="app">
+        <div class="yellow-block">
+        <h2 class="title">Répondre aux questions svp</h1>
+        <form id="myForm">
+            <fieldset>
+            <legend>Questionnaire</legend>
+            <div class="group">
+                <span class="question">1. Senegal est un pays du continent:</span>
+                <ol class="answers" type="a">
+                <li>
+                    <input type="radio" id="europe" name="country" value="europe" required>
+                    <label for="europe">Européen</label>
+                </li>
+                <li>
+                    <input type="radio" id="afrique" name="country" value="afrique">
+                    <label for="afrique">Africain</label>
+                </li>
+                <li>
+                    <input type="radio" id="asie" name="country" value="asie">
+                    <label for="asie">Asiatique</label>
+                </li>
+                <li>
+                    <input type="radio" id="amerique" name="country" value="amerique">
+                    <label for="amerique">Américain</label>
+                </li>
+                </ol>
+            </div>
+            <div class="group">
+                <span class="question">2. Bob Marley est un?</span>
+                <ol class="answers" type="a">
+                <li>
+                    <input type="radio" id="acteur" name="job" value="acteur" required>
+                    <label for="acteur">Acteur de cinéma</label>
+                </li>
+                <li>
+                    <input type="radio" id="musicien" name="job" value="musicien">
+                    <label for="musicien">Musicien</label>
+                </li>
+                <li>
+                    <input type="radio" id="football" name="job" value="football">
+                    <label for="football">Footballeur</label>
+                </li>
+                <li>
+                    <input type="radio" id="ecrivain" name="job" value="ecrivain">
+                    <label for="ecrivain">Ecrivain</label>
+                </li>
+                </ol>
+            </div>
+            <div class="group">
+                <span class="question">3. Bombardier est un?</span>
+                <ol class="answers" type="a">
+                <li>
+                    <input type="radio" id="cinema" name="bombardier" value="cinema" required>
+                    <label for="cinema">Acteur de cinema</label>
+                </li>
+                <li>
+                    <input type="radio" id="foot" name="bombardier" value="foot">
+                    <label for="foot">Footballeur</label>
+                </li>
+                <li>
+                    <input type="radio" id="ingenieur" name="bombardier" value="ingenieur">
+                    <label for="ingenieur">Ingénieur</label>
+                </li>
+                <li>
+                    <input type="radio" id="lutteur" name="bombardier" value="lutteur">
+                    <label for="lutteur">Lutteur</label>
+                </li>
+                </ol>
+            </div>
+            <div class="group">
+                <span class="question">4. Bill Clinton est le president de la republique du?</span>
+                <ol class="answers" type="a">
+                <li>
+                    <input type="radio" id="senegal" name="clinton" value="senegal" required>
+                    <label for="senegal">Senegal</label>
+                </li>
+                <li>
+                    <input type="radio" id="gambie" name="clinton" value="gambie">
+                    <label for="gambie">Gambie</label>
+                </li>
+                <li>
+                    <input type="radio" id="guinee" name="clinton" value="guinee">
+                    <label for="guinee">Guinée</label>
+                </li>
+                <li>
+                    <input type="radio" id="usa" name="clinton" value="usa">
+                    <label for="usa">USA</label>
+                </li>
+                </ol>
+            </div>
+            <div class="group">
+                <span class="question">5. Youssou Ndour est?</span>
+                <ol class="answers" type="a">
+                <li>
+                    <input type="radio" id="danseur" name="youssou" value="danseur" required>
+                    <label for="danseur">Danseur</label>
+                </li>
+                <li>
+                    <input type="radio" id="chanteur" name="youssou" value="chanteur">
+                    <label for="chanteur">Chanteur</label>
+                </li>
+                <li>
+                    <input type="radio" id="mecanicien" name="youssou" value="mecanicien">
+                    <label for="mecanicien">Mécanicien</label>
+                </li>
+                <li>
+                    <input type="radio" id="informaticien" name="youssou" value="informaticien">
+                    <label for="informaticien">Informaticien</label>
+                </li>
+                </ol>
+            </div>
+            <div class="btn-container">
+                <button type="submit">Valider</button>
+            </div>
+            </fieldset>
+        </form>
+        <p id="result" class="result"></p>
+        </div>
+    </div>
+    <div id="app"></div>
+    <script src='./index.js'></script>
+
+</body>
+</html>
+    
